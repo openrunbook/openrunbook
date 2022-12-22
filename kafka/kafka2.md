@@ -1,4 +1,4 @@
-# Kafka 2.0
+# Kafka 2.x
 
 Apache Kafka is a distributed streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on an abstraction of a distributed commit log. Since being created and open sourced by LinkedIn in 2011, Kafka has quickly evolved from messaging queue to a full-fledged streaming platform.
 
