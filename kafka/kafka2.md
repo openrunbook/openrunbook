@@ -16,6 +16,7 @@ As a streaming platform, Apache Kafka provides low-latency, high-throughput, fau
 - Useful blog posts
   - [Slack Kafka setup](https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/)
   - [Notes from Abode at Kafka](https://blog.developer.adobe.com/wins-from-effective-kafka-monitoring-at-adobe-stability-performance-and-cost-savings-a3ecb701ee5b?gi=632081e1d8f5)
+  - [Pinterest Kafka Setup](https://medium.com/pinterest-engineering/how-pinterest-runs-kafka-at-scale-ff9c6f735be)
 
 # Package management and release
 
