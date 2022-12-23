@@ -16,7 +16,10 @@ As a streaming platform, Apache Kafka provides low-latency, high-throughput, fau
 
 # Package management and release
 
-# Kafka offset exporter
+## Cruise Control
+[Cruise control](https://github.com/linkedin/cruise-control) UI is useful for automating most cluster management operations. 
+
+## Kafka offset exporter
 [Kafka offset exporter](https://github.com/echojc/kafka-offset-exporter) can be used to export consumer statistics to a metrics backend like Prometheus. 
 
 ## Kafka Manager UI
