@@ -123,14 +123,14 @@ Causes of offline partition:
 - `get /brokers/topics/[topic name]/partitions/5/state` will give the current state of the partition
 
 ```
-[zk: localhost:2181(CONNECTED) 1] get /brokers/topics/apache-access/partitions/276/state
+[zk: localhost:2181(CONNECTED) 1] get /brokers/topics/apache/partitions/276/state
 {"controller_epoch":3,"leader":-1,"version":1,"leader_epoch":10,"isr":[1019,1014,1020]}
 ```
 
 - change the leader of the partition `set /brokers/topics/[topic name]]/partitions/5/state {"controller_epoch":19,"leader":1003,"version":1,"leader_epoch":88,"isr":[1003,1004, 1005]}`
 
 ```
-[zk: localhost:2181(CONNECTED) 4] set /brokers/topics/apache-access/partitions/276/state {"controller_epoch":3,"leader":1019,"version":1,"leader_epoch":10,"isr":[1019,1014,1020]}
+[zk: localhost:2181(CONNECTED) 4] set /brokers/topics/apache/partitions/276/state {"controller_epoch":3,"leader":1019,"version":1,"leader_epoch":10,"isr":[1019,1014,1020]}
 ```
 
 - verify the offline partition is fixed in the [Kafka Service Grafana dashboard].
