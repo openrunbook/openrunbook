@@ -32,8 +32,8 @@ As a streaming platform, Apache Kafka provides low-latency, high-throughput, fau
 
 ## Restarting a single kafka broker on a node
 
-To restart a process on the kafka broker just run `sudo systemctl restart kafka201`.
-To check the status of the kafka process on the broker `sudo systemctl status kafka201`.
+To restart a process on the kafka broker just run `sudo systemctl restart kafka`.
+To check the status of the kafka process on the broker `sudo systemctl status kafka`.
 
 ## Fixing URP(Under Replicated Partition) issues in Kafka cluster
 
