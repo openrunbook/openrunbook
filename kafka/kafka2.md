@@ -13,6 +13,9 @@ As a streaming platform, Apache Kafka provides low-latency, high-throughput, fau
   - [Topic/Partition Design Principals](https://www.confluent.io/blog/how-to-choose-the-number-of-topicspartitions-in-a-kafka-cluster/)
   - [Apache Kafka source code](https://github.com/apache/kafka)
 - Links to dashboards, build and release pipelines.
+- Useful blog posts
+  - [Slack Kafka setup](https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/)
+  - [Notes from Abode at Kafka](https://blog.developer.adobe.com/wins-from-effective-kafka-monitoring-at-adobe-stability-performance-and-cost-savings-a3ecb701ee5b?gi=632081e1d8f5)
 
 # Package management and release
 
