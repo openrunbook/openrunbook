@@ -14,3 +14,6 @@ Each folder in the project will contain a runbook for that service. The runbook 
 
 ## This runbook seems incomplete?
 A runbook is a very customized to a specific environment. Since these runbooks are meant to be as general purpose as possible, they typically would have some holes in them where general commands would go in. So, they may appear incomplete. But, they are definitely better than the alternatives out there.
+
+## Where are these runbooks from?
+These runbooks are production runbooks contributed by people from various companies. 
