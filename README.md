@@ -16,4 +16,4 @@ Each folder in the project will contain a runbook for that service. The runbook 
 A runbook is very customized to a specific environment. Since these runbooks are meant to be as general purpose as possible, they typically would have some holes in them where general commands would go in. So, they may appear incomplete. But, they are definitely better than going through the rabbit hole of github threads and stack overflow questions during an incident.
 
 ## Where are these runbooks from?
-These runbooks are production runbooks contributed by people from various companies. 
+These runbooks are production runbooks contributed by people from various companies like Slack, Salesforce etc..
