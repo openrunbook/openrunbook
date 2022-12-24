@@ -183,9 +183,9 @@ You can reset to a particular date time using `--to-datetime` flag in place of `
 ## Kafka disk space alert
 We usually run our Kafka clusters at 50% disk utilization, so this should almost never be an issue. If you run into disk space issues, please do the following steps:
 
-Add more nodes to the cluster by updating the terraform config or updating the asg.
-Kicking off a partition relabance via cruise control once the new host is up.
-We try to store 2 days worth of data in Kafka. In a pinch, you can also reduce the retention for the topics via the Kafka Manager UI.
+* Add more nodes to the cluster by updating the terraform config or updating the asg.
+* Kicking off a partition relabance via cruise control once the new host is up.
+* In a pinch, you can also reduce the retention for the topics via the Kafka Manager UI.
 
 ## Cruise control stuck in a loop
 
