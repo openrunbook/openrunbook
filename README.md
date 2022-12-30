@@ -10,7 +10,33 @@ Open Runbook is a public runbook for operating modern software systems. Modern s
 # Goal
 The goal of OpenRunbook project is to provide a starting point for your runbooks. However, since runbooks look at specific metrics we would also provide sample dashboards and configs. Every environment is a special snowflake so our runbook will not be a drop in replacement for your environment, but aims to be a better than average starting point on which your internal runbook can be based on.
 
-# Repo organization
+
+# FAQ
+
+## Why does this project exist?
+* We are tired of haphazardly hunting through messy threads of GitHub issues and StackOverflow during an incident.
+* We don’t want a one-off fix, we want to deepen our understanding of the problem space and have somewhat decent solutions to try.
+* We want to give people a resource where they can benefit from our collective experience of running systems.
+* We want to share best practices for writing runbooks.
+
+## This runbook seems incomplete?
+Every production environment is a special snowflake to which a runbook is customized. Since these runbooks are meant to be as general purpose as possible, they typically would have some holes in them where general commands would go in. So, they may appear incomplete and the goal of this project is to act as a starting point for your runbooks.
+
+While not perfect, we hope these runbooks provide a better starting point than going through the rabbit hole of github threads and stack overflow questions during an incident.
+
+## Where are these runbooks from?
+These runbooks are production runbooks contributed by people from various companies like Slack, Salesforce etc..
+
+## How can I contribute? 
+Please submit a pull request to update the runbooks. 
+
+**Creating a runbook for a new project**
+
+To create a runbook for a new project, please create a folder for it. All configs should be placed in the configs folder.
+
+Please use the single page runbook [template](/template/runbook_template.md) for the runbook.
+
+## How is this repo organized?
 
 Each folder in the project will contain a runbook for a specific service. The runbook will be a single page. In addition, the runbook can contain additional assets like public dashboards and good starter configurations. For example, `kafka` directory contains the Kafka runbook. 
 
@@ -32,28 +58,3 @@ In practice, we found that a single page runbook suffers from fewer flaws than a
 * Multi-page runbook has a clear deliniation of sections. The same ease of navigation can be achieved by adding an index at the top of the page.
 
 * One criticism of a long single page runbook is that it may obscure some useful information among information that may be some day useful. While true, a long list of runbook actions is a sign that users should probably use a script to achieve the same outcome instead of manual steps. Also, in those cases, it is ok to create a new page and link to it. However, such an action should be an exception and not the norm. 
-
-# FAQ
-
-## Why does this project exist?
-* We are tired of haphazardly hunting through messy threads of GitHub issues and StackOverflow during an incident.
-* We don’t want a one-off fix, we want to deepen our understanding of the problem space and have somewhat decent solutions to try.
-* We want to give people a resource where they can benefit from our collective experience of running systems.
-* We want to share best practices for writing runbooks.
-
-## This runbook seems incomplete?
-Every production environment is a special snowflake to which a runbook is customized. Since these runbooks are meant to be as general purpose as possible, they typically would have some holes in them where general commands would go in. So, they may appear incomplete and the goal of this project is to act as a starting point for your runbooks.
-
-While not perfect, we hope these runbooks provide a better starting point than going through the rabbit hole of github threads and stack overflow questions during an incident.
-
-## Where are these runbooks from?
-These runbooks are production runbooks contributed by people from various companies like Slack, Salesforce etc..
-
-## Contribution guidelines
-Please submit a pull request to update the runbooks. 
-
-**Creating a runbook for a new project**
-
-To create a runbook for a new project, please create a folder for it. All configs should be placed in the configs folder.
-
-Please use the single page runbook [template](/template/runbook_template.md) for the runbook.
