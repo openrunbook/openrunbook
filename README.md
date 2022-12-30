@@ -8,7 +8,7 @@ Modern open source software has grown very complex and is fast changing. Without
 Open Runbook is a public runbook for operating modern software systems. Modern software systems are complex and take a lot of tribal knowledge to run. Open Runbook aims to be a place to capture document some of that tribal knowledge. If you are running an open source software, open runbook can be a starting point for effectively running the service.
 
 # Goal
-The goal of OpenRunbook project is to provide a starting point for your runbooks. However, since runbooks look at specific metrics we would also provide sample dashboards and configs. Every environment is a special snowflake so our runbook will not be a drop in replacement for your environment, but aims to be a better than avrage starting point on which your internal runbook can be based on.
+The goal of OpenRunbook project is to provide a starting point for your runbooks. However, since runbooks look at specific metrics we would also provide sample dashboards and configs. Every environment is a special snowflake so our runbook will not be a drop in replacement for your environment, but aims to be a better than average starting point on which your internal runbook can be based on.
 
 # Repo Organization
 
