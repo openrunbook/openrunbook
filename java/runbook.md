@@ -1,8 +1,8 @@
 # Java runbook
 
-## How do I debug out of memory exceptions in Java?
+## How do I debug out of memory exceptions(OOM) in Java?
 
-Analyzing and fixing out-of-memory errors in Java is very simple.
+Analyzing and fixing out-of-memory(OOM) errors in Java is very simple.
 
 In Java the objects that occupy memory are all linked to some other objects, forming a giant tree. The idea is to find the largest branches of the tree, which will usually point to a memory leak situation (in Java, you leak memory not when you forget to delete an object, but when you forget to forget the object, i.e. you keep a reference to it somewhere).
 
