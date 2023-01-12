@@ -1,0 +1,4949 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": false,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 901,
+  "iteration": 1673533562745,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 53,
+      "panels": [],
+      "title": "Properties",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 1,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(type) (instance{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "type - {{type}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Instance Type",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(release) (node_uname_info{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "release - {{release}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Kernel",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(az_id) (instance{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "az_id - {{az_id}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "AZ ID",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(chefrole) (instance{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "chefrole - {{chefrole}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Chef Role",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "id": 54,
+      "panels": [],
+      "title": "Summary",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 5,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_load1{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "load1 - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "node_load5{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "load5 - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "node_load15{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "load15 - {{instance}}",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Load",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum(irate(node_pressure_cpu_waiting_seconds_total{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "cpu wait - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(irate(node_pressure_io_stalled_seconds_total{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "io stall - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(irate(node_pressure_io_waiting_seconds_total{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "io wait - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "sum(irate(node_pressure_memory_stalled_seconds_total{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "mem stall - {{instance}}",
+          "refId": "D"
+        },
+        {
+          "expr": "sum(irate(node_pressure_memory_waiting_seconds_total{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "mem wait - {{instance}}",
+          "refId": "E"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Pressure",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 10,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 7,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 0,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "idle",
+          "color": "#008000"
+        },
+        {
+          "alias": "system",
+          "color": "#ffa500"
+        },
+        {
+          "alias": "user",
+          "color": "#ff0000"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(mode) (irate(node_cpu{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m])) / ignoring(mode) group_left() sum(irate(node_cpu{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "{{mode}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "CPU (Cumulative)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "max": 1,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 10,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 0,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "buffers",
+          "color": "#ffff00"
+        },
+        {
+          "alias": "cached",
+          "color": "#90ee90"
+        },
+        {
+          "alias": "free",
+          "color": "#008000"
+        },
+        {
+          "alias": "used",
+          "color": "#ff0000"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum(node_memory_MemTotal{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}) - sum(node_memory_MemFree{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}) - sum(node_memory_Cached{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}) - sum(node_memory_Buffers{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "used",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(node_memory_Buffers{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "buffers",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(node_memory_Cached{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "cached",
+          "refId": "C"
+        },
+        {
+          "expr": "sum(node_memory_MemFree{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "free",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Memory (Cumulative)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 9,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_network_transmit_bytes{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tx - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_network_receive_bytes{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "rx - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Network Bytes",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "Bps",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 10,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_network_transmit_packets{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tx - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_network_receive_packets{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "rx - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Network Packets",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "pps",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 11,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_disk_read_time_ms{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]) / 1000)",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_disk_write_time_ms{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]) / 1000)",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "IO Time",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "s",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 12,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "time() - node_boot_time{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "uptime - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Uptime",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "s",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 13,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_procs_running{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "run - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "node_procs_blocked{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "blocked - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Proccesses",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "irate(node_forks{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m])",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "forks - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Forks",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 15,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "irate(node_context_switches{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m])",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ctxsw - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Context Switches",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 16,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_filefd_allocated{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "fds - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "File Descriptors",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 22
+      },
+      "hiddenSeries": false,
+      "id": 17,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "irate(node_intr{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m])",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "intr - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Interrupts",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 55,
+      "panels": [],
+      "title": "CPU Detail",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 18,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "avg by(instance) (irate(node_cpu{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\",mode=\"idle\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "idle - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "CPU Idle - Core Average",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "max": 1,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 19,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "irate(node_cpu{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\",mode=\"idle\"}[1m])",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "{{cpu}} - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "CPU Idle by Core",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "max": 1,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 20,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.5.13",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "irate(node_cpu{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\",mode=\"softirq\"}[1m])",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "{{cpu}} - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "CPU SoftIRQ by Core",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 56,
+      "panels": [],
+      "title": "Network Detail",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 34
+      },
+      "id": 21,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(device) (irate(node_network_transmit_packets{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tx - {{device}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(device) (irate(node_network_receive_packets{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "rx - {{device}}",
+          "refId": "B"
+        }
+      ],
+      "title": "Network Packets By Interface (Cumulative)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "pps",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 34
+      },
+      "id": 22,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(device) (irate(node_network_transmit_drop{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "drop - {{device}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(device) (irate(node_network_transmit_errors{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "errors - {{device}}",
+          "refId": "B"
+        },
+        {
+          "expr": "sum by(device) (irate(node_ethtool_bw_in_allowance_exceeded{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ENA ingress exceeded - {{device}}",
+          "refId": "C"
+        },
+        {
+          "expr": "sum by(device) (irate(node_ethtool_bw_out_allowance_exceeded{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ENA egress exceeded - {{device}}",
+          "refId": "D"
+        },
+        {
+          "expr": "sum by(device) (irate(node_ethtool_conntrack_allowance_exceeded{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ENA conntrack exceeded - {{device}}",
+          "refId": "E"
+        },
+        {
+          "expr": "sum by(device) (irate(node_ethtool_linklocal_allowance_exceeded{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ENA linklocal exceeded - {{device}}",
+          "refId": "F"
+        },
+        {
+          "expr": "sum by(device) (irate(node_ethtool_pps_allowance_exceeded{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "ENA pps exceeded - {{device}}",
+          "refId": "G"
+        }
+      ],
+      "title": "Network Drops / Errors By Interface (Cumulative)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 34
+      },
+      "id": 23,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_arp_entries{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "arpe - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "ARP Entries",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 34
+      },
+      "id": 24,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_sockstat_FRAG_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "frag - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "node_sockstat_RAW_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "raw - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "node_sockstat_TCP_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "node_sockstat_UDP_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "udp - {{instance}}",
+          "refId": "D"
+        }
+      ],
+      "title": "Sockets Inuse (sockstat)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 39
+      },
+      "id": 25,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_sockstat_TCP_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "inuse - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "node_sockstat_TCP_alloc{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "alloc - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "node_sockstat_TCP_orphan{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "orphan - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "node_sockstat_TCP_tw{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tw - {{instance}}",
+          "refId": "D"
+        },
+        {
+          "expr": "node_sockstat_TCP_mem{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "mem - {{instance}}",
+          "refId": "E"
+        },
+        {
+          "expr": "node_netstat_Tcp_CurrEstab{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "netstat-estab - {{instance}}",
+          "refId": "F"
+        }
+      ],
+      "title": "TCP States (sockstat / netstat)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 39
+      },
+      "id": 26,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Tcp_ActiveOpens{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "active open - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Tcp_PassiveOpens{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "passive open - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Tcp_AttemptFails{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "attempt fail - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Tcp_EstabResets{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "estab resets - {{instance}}",
+          "refId": "D"
+        }
+      ],
+      "title": "TCP Sockets Attempted (netstat)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 39
+      },
+      "id": 27,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum(irate(node_netstat_Tcp_RetransSegs{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m])) / sum(irate(node_netstat_Tcp_OutSegs{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "title": "TCP Retransmit % (Cumulateive)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 39
+      },
+      "id": 28,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_SyncookiesSent{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_syncookie_sent - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_EmbryonicRsts{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_embry_rst - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_RcvPruned{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_rcvpruned - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_OfoPruned{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_ofopruned - {{instance}}",
+          "refId": "D"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_ListenOverflows{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "{{instance}}",
+          "refId": "E"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_ListenDrops{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_listendrop - {{instance}}",
+          "refId": "F"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_MemoryPressures{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_mempress- {{instance}}",
+          "refId": "G"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPBacklogDrop{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_bldrop - {{instance}}",
+          "refId": "H"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Tcp_InErrs{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_inerrs - {{instance}}",
+          "refId": "I"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPAbortOnData{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_tcpabortondata - {{instance}}",
+          "refId": "J"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPAbortOnTimeout{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_tcpabortontimeout - {{instance}}",
+          "refId": "K"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPRcvCollapsed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_tcprcvcollapsed - {{instance}}",
+          "refId": "L"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPLostRetransmit{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_tcplostretransmit - {{instance}}",
+          "refId": "M"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPRcvCollapsed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_tcprcvcollapsed - {{instance}}",
+          "refId": "N"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPReqQFullDoCookies{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_reqqfulldocookies - {{instance}}",
+          "refId": "O"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_TcpExt_TCPWqueueTooBig{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "tcp_wqueuetoobig - {{instance}}",
+          "refId": "P"
+        }
+      ],
+      "title": "TCP Nasty Shit",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 44
+      },
+      "id": 57,
+      "panels": [],
+      "title": "Sockstat",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 45
+      },
+      "id": 29,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_UDP_mem{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "udp_mem - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "udp mem",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 45
+      },
+      "id": 30,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_UDP_mem_bytes{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "udp_mem_bytes - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "udp membytes",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 45
+      },
+      "id": 31,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_UDP_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "UDP_inuse - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "udp inuse",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 45
+      },
+      "id": 32,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Udp_RcvbufErrors{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "UDP_RcvbufErrors - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Udp_InErrors{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "UDP_InErrors - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_netstat_Udp_SndbufErrors{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "UDP_SndbufErrors - {{instance}}",
+          "refId": "C"
+        }
+      ],
+      "title": "udp errors",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 50
+      },
+      "id": 33,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_TCP_mem{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "TCP_mem - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "TCP mem",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 50
+      },
+      "id": 34,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_TCP_mem_bytes{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "TCP_mem_bytes - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "TCP mem bytes",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "bytes",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 50
+      },
+      "id": 35,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_sockstat_TCP_inuse{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "TCP_inuse - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "TCP inuse",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 55
+      },
+      "id": 58,
+      "panels": [],
+      "title": "IO/FS Detail",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 56
+      },
+      "id": 36,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_bytes_read{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{device}} - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_bytes_written{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{device}} - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IO Bytes",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "Bps",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 56
+      },
+      "id": 37,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_reads_completed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{device}} - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_writes_completed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{device}} - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IOPS",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 56
+      },
+      "id": 38,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_reads_completed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{device}} - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_writes_completed{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{device}} - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IO Completed",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 56
+      },
+      "id": 39,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_sectors_read{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{device}} - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_sectors_written{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{device}} - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IO Sectors",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 61
+      },
+      "id": 40,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_reads_merged{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "read - {{device}} - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_writes_merged{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "write - {{device}} - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IO Merges",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 61
+      },
+      "id": 41,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_io_time_ms{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]) / 1000)",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "time - {{device}} - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "IO Time",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "s",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 61
+      },
+      "id": 42,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance, device) (irate(node_disk_io_time_weighted{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]) / 1000)",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "time_weighted - {{device}} - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "IO Time Weighted",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "s",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 61
+      },
+      "id": 43,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(device, instance) (node_filesystem_avail{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"} / node_filesystem_size{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "avail - {{device}} - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Avail Space by Device",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "percentunit",
+          "logBase": 0,
+          "max": 1,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 66
+      },
+      "id": 44,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (node_filesystem_device_error{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"})",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "errors - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Device Errors",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 71
+      },
+      "id": 59,
+      "panels": [],
+      "title": "Memory/VM Detail",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 72
+      },
+      "id": 45,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_memory_SwapTotal{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "swapped - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "node_memory_Mapped{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "mapped - {{instance}}",
+          "refId": "B"
+        },
+        {
+          "expr": "node_memory_Inactive{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "inactive - {{instance}}",
+          "refId": "C"
+        },
+        {
+          "expr": "node_memory_Active{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "active - {{instance}}",
+          "refId": "D"
+        }
+      ],
+      "title": "Memory Jank",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 72
+      },
+      "id": 46,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_oom_kill{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "oomkill - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "OOM Kills",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 72
+      },
+      "id": 47,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_pgfault{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "minor - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_pgmajfault{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "major - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "Page Faults",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "ops",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 72
+      },
+      "id": 48,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_pgpgin{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "in - {{instance}}",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_pgpgout{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "out - {{instance}}",
+          "refId": "B"
+        }
+      ],
+      "title": "Page I/O",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "KBs",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 77
+      },
+      "id": 49,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "sum by(instance) (irate(node_vmstat_pgfree{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}[1m]))",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "pgfree - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Pages Freed",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "none",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "000000051"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 82
+      },
+      "id": 60,
+      "panels": [],
+      "title": "Misc",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 83
+      },
+      "id": 50,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "node_entropy_available_bits{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "entropy - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Entropy",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "decbits",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "datasource": {
+        "uid": "$source"
+      },
+      "editable": false,
+      "error": false,
+      "fill": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 83
+      },
+      "id": 51,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "expr": "time() - node_time{az_id=~\"$az_id\",chefrole=~\"$chefrole\",instance=~\"$instance\"}",
+          "interval": "1m",
+          "intervalFactor": 1,
+          "legendFormat": "drift - {{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Time Drift",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "x-axis": true,
+      "xaxis": {
+        "format": "",
+        "logBase": 0,
+        "show": true
+      },
+      "y-axis": true,
+      "yaxes": [
+        {
+          "format": "s",
+          "logBase": 0,
+          "min": 0,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 0,
+          "show": true
+        }
+      ]
+    },
+  ],
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": [
+    "Viz"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allFormat": "",
+        "allValue": "",
+        "current": {
+          "selected": false,
+          "text": "Prometheus_Node",
+          "value": "Prometheus_Node"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "",
+        "multi": false,
+        "multiFormat": "",
+        "name": "source",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "Prometheus_Node.*",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "datasource"
+      },
+      {
+        "allFormat": "",
+        "allValue": "",
+        "current": {
+          "text": "",
+          "value": ""
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "",
+        "multi": false,
+        "multiFormat": "",
+        "name": "instance",
+        "options": [
+          {
+            "selected": true,
+            "text": "",
+            "value": ""
+          }
+        ],
+        "query": "",
+        "refresh": false,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "textbox"
+      },
+      {
+        "allFormat": "",
+        "allValue": "",
+        "current": {
+          "text": ".*",
+          "value": ".*"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "",
+        "multi": false,
+        "multiFormat": "",
+        "name": "chefrole",
+        "options": [
+          {
+            "selected": true,
+            "text": ".*",
+            "value": ".*"
+          }
+        ],
+        "query": ".*",
+        "refresh": false,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "textbox"
+      },
+      {
+        "allFormat": "",
+        "allValue": "",
+        "current": {
+          "text": ".*",
+          "value": ".*"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "",
+        "multi": false,
+        "multiFormat": "",
+        "name": "az_id",
+        "options": [
+          {
+            "selected": true,
+            "text": ".*",
+            "value": ".*"
+          }
+        ],
+        "query": ".*",
+        "refresh": false,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "textbox"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [],
+    "time_options": []
+  },
+  "timezone": "browser",
+  "title": "Node Metrics",
+  "uid": "nodemetrics",
+  "version": 1273,
+  "weekStart": ""
+}
